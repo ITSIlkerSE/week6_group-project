@@ -29,4 +29,7 @@ public class MyWardrobeService {
         return repo.save(product);
     }
 
+    public void deleteProduct(String id) {
+        repo.deleteById(id);
+    }
 }

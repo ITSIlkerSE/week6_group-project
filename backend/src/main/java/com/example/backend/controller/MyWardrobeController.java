@@ -30,4 +30,9 @@ public class MyWardrobeController {
         return service.addProduct(product);
     }
 
+    @DeleteMapping("{id}")
+    public void deleteProduct(@PathVariable String id) {
+        service.deleteProduct(id);
+    }
+
 }
