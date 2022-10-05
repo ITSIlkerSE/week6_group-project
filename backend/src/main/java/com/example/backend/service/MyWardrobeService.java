@@ -19,4 +19,7 @@ public class MyWardrobeService {
         return repo.findAll();
     }
 
+    public MyWardrobeModel addProduct(MyWardrobeModel newProduct) {
+        return repo.save(newProduct);
+    }
 }

@@ -2,9 +2,7 @@ package com.example.backend.controller;
 import com.example.backend.model.MyWardrobeModel;
 import com.example.backend.service.MyWardrobeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,6 +24,11 @@ public class MyWardrobeController {
         return service.getAllProducts();
     }
 
+
+    @PostMapping
+    public MyWardrobeModel addProduct (@RequestBody MyWardrobeModel newProduct) {
+         return service.addProduct(newProduct);
+    }
 
 
 
