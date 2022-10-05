@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/wardrobe")
@@ -23,6 +24,11 @@ public class MyWardrobeController {
     @GetMapping
     public List<MyWardrobeModel> getAllProducts() {
         return service.getAllProducts();
+    }
+
+    @GetMapping("{id}")
+    public Optional<MyWardrobeModel> getProductById(@PathVariable String id) {
+        return service.getProductById(id);
     }
 
     @PostMapping
