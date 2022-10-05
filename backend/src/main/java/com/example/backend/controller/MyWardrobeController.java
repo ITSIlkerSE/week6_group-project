@@ -41,4 +41,9 @@ public class MyWardrobeController {
         service.deleteProduct(id);
     }
 
+    @PutMapping(path = "{id}")
+    public MyWardrobeModel updateProduct(@PathVariable String id, @RequestBody MyWardrobeModel product){
+        return service.updateProduct(product);
+    }
+
 }
