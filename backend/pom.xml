@@ -59,6 +59,7 @@
     </dependencies>
 
     <build>
+        <finalName>wardrobeDB</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
