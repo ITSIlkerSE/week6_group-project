@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.math.BigDecimal;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -22,6 +24,8 @@ public class MyWardrobeModel {
     private String size;
     private String description;
     private String price;
-
-
+    private String category;
+    private String brand;
+    private float rating;
+    private boolean inStock;
 }
