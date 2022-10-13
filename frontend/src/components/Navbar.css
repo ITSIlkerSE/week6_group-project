@@ -1,0 +1,9 @@
+.button-nav {
+    background-color: #ffffff;
+    color: darkslateblue;
+}
+
+:hover.button-nav {
+    background-color: #ececec;
+    color: darkslateblue;
+}

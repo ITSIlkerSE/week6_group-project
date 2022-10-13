@@ -1,0 +1,51 @@
+.card {
+    width: 18rem;
+    text-align: center;
+    background-color: #ececec;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 1rem 1rem;
+    box-shadow: 5px 5px 5px #00000052;
+}
+
+.card-body {
+    padding-bottom: 3px;
+    border-bottom-color: #ececec;
+}
+
+.list-group-item {
+    height: 1rem;
+    padding: 0;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.button1 {
+    background-color: darkslateblue;
+    border-color: darkslateblue;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+:hover.button1 {
+    background-color: #ffffff;
+    border-color: darkslateblue;
+    color: darkslateblue;
+}
+
+.button2 {
+    background-color: #ffffff;
+    border-color: darkslateblue;
+    color: darkslateblue;
+    margin-bottom: 5px;
+}
+
+:hover.button2 {
+
+    background-color: darkslateblue;
+    border-color: darkslateblue;
+    color: #ffffff;
+}
