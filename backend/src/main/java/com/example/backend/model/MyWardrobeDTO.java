@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -17,5 +19,9 @@ public class MyWardrobeDTO {
     private String size;
     private String description;
     private String price;
+    private String category;
+    private String brand;
+    private float rating;
+    private boolean inStock;
 
 }
