@@ -4,7 +4,6 @@ import ProductGallery from "../components/ProductGallery";
 
 type HomepageProps = {
 
-    product: Product;
     products: Product[];
 
 }
