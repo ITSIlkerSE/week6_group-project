@@ -29,6 +29,7 @@
     color: #ffffff;
     margin-bottom: 5px;
     height: 35px;
+    font-size: small;
 }
 
 :hover.button1 {
@@ -36,6 +37,7 @@
     border-color: darkslateblue;
     color: darkslateblue;
     height: 35px;
+    font-size: small;
 }
 
 .button2 {
@@ -44,12 +46,13 @@
     color: darkslateblue;
     margin-bottom: 5px;
     height: 35px;
+    font-size: small;
 }
 
 :hover.button2 {
-
     background-color: darkslateblue;
     border-color: darkslateblue;
     color: #ffffff;
     height: 35px;
+    font-size: small;
 }
