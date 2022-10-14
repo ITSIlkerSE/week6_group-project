@@ -26,7 +26,6 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Homepage
-            product={product}
             products={products}
         />}/>
           <Route path="/wardrobe/add" element={<AddProductForm

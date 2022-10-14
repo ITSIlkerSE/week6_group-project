@@ -1,19 +1,19 @@
-import MyWardrobeGallery from "../components/MyWardrobeGallery";
-import {MyWardrobeModel} from "../model/MyWardrobeModel";
-
-
+import React from 'react';
+import {Product} from "../model/Product";
+import ProductGallery from "../components/ProductGallery";
 
 type HomepageProps = {
-    myWardrobeModel : MyWardrobeModel[];
+
+    products: Product[];
+
 }
 
-
-export default function Homepage(props: HomepageProps) {
-
-
-    return(
-        <div>
-            <MyWardrobeGallery myWardrobeModel={props.myWardrobeModel} />y
+function Homepage(props: HomepageProps) {
+    return (
+        <div className="homepage-container">
+            <ProductGallery products={props.products} />
         </div>
-    )
+    );
 }
+
+export default Homepage;
