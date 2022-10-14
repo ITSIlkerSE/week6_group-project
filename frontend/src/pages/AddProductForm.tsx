@@ -87,7 +87,7 @@ function AddProductForm(props: AddProductFormProps) {
                     name="description"
                     required={true}
                     rows={3}
-                    placeholder="movie description"
+                    placeholder="product description"
                     onChange={(e) => setDescription(e.target.value)}
                 />
                 <input
