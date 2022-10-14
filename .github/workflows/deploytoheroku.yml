@@ -59,6 +59,6 @@ jobs:
       - name: Login to Heroku
         run: heroku container:login
       - name: Push Docker Image
-        run: heroku container:push web -a wardrobeDB
+        run: heroku container:push web -a igr-wardrobe-db
       - name: Release Docker Container
-        run: heroku container:release web -a wardrobeDB
+        run: heroku container:release web -a igr-wardrobe-db
