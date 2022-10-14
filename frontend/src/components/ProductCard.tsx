@@ -20,7 +20,7 @@ function ProductCard(props: ProductCardProps) {
 
                 </div>
 
-            <div className="gap-2 d-md-flex justify-content-md-center">
+            <div className="gap-2 d-md-flex justify-content-md-center buttons">
                 <button className="btn me-md-2 button1" type="button">SEE DETAILS</button>
                 <button className="btn me-md-2 button2" type="button">ADD TO CART</button>
             </div>
