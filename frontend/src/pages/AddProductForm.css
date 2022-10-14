@@ -1,0 +1,17 @@
+.button-add {
+    background-color: darkslateblue;
+    color: #ffffff;
+
+}
+
+:hover.button-add {
+    border-color: darkslateblue;
+    background-color: #ffffff;
+    color: darkslateblue;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}

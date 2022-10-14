@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import useProduct from "./hooks/useProduct";
 import Navbar from "./components/Navbar";
+import AddProductForm from "./pages/AddProductForm";
 
 function App() {
 
@@ -28,6 +29,9 @@ function App() {
             product={product}
             products={products}
         />}/>
+          <Route path="/wardrobe/add" element={<AddProductForm
+              product={product}
+              addProduct={addNewProduct} />}/>
       </Routes>
     </Router>
       </div>

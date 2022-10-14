@@ -12,7 +12,7 @@ function ProductGallery(props: ProductGalleryProps) {
 
     const sorting = [...props.products].sort((a, b) => a.name > b.name ? 1 : -1)
     return (
-        <div style={{display: "flex"}}>
+        <div style={{display: "flex", margin: "auto"}}>
             {sorting.map((product, index) =>
                 <ProductCard product={product} key={index}/>
             )}
