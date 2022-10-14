@@ -1,7 +1,7 @@
 import React, {FormEvent, useState} from 'react';
 import "./AddProductForm.css";
 import {Product} from "../model/Product";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 type AddProductFormProps = {
 
@@ -52,6 +52,16 @@ function AddProductForm(props: AddProductFormProps) {
             setRating(0)
             setInStock(false)
         }
+        setTimeout(() => {
+            routeChange()
+        }, 3000);
+
+    }
+
+    let navigate = useNavigate();
+    const routeChange = () =>{
+        let path = `/`;
+        navigate(path);
     }
 
     return (

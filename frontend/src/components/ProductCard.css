@@ -29,7 +29,7 @@
     color: #ffffff;
     margin-bottom: 5px;
     height: 35px;
-    font-size: small;
+    font-size: 1vw;
 }
 
 :hover.button1 {
@@ -37,7 +37,7 @@
     border-color: darkslateblue;
     color: darkslateblue;
     height: 35px;
-    font-size: small;
+    font-size: 1vw;
 }
 
 .button2 {
@@ -46,7 +46,7 @@
     color: darkslateblue;
     margin-bottom: 5px;
     height: 35px;
-    font-size: small;
+    font-size: 1vw;
 }
 
 :hover.button2 {
@@ -54,5 +54,5 @@
     border-color: darkslateblue;
     color: #ffffff;
     height: 35px;
-    font-size: small;
+    font-size: 1vw;
 }
