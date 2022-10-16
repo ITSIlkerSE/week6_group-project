@@ -1,11 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./Navbar.css";
+import {Product} from "../model/Product";
 
 type NavbarProps = {
-
+    products: Product[];
 }
 
 function Navbar(props: NavbarProps) {
+
     return (
         <nav className="navbar navbar-expand-lg navbar-dark" style={{background: "darkslateblue", color: "#ffffff"}}>
             <div className="container-fluid">
@@ -39,7 +41,8 @@ function Navbar(props: NavbarProps) {
                         </li>
                     </ul>
                     <form className="d-flex" role="search" style={{width: "100%"}}>
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" style={{width: "100%"}}/>
+                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" style={{width: "100%"}}
+                        />
                             <button className="btn button-nav" type="submit">Search</button>
                     </form>
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">

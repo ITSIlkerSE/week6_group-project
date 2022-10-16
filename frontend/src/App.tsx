@@ -6,6 +6,7 @@ import Homepage from "./pages/Homepage";
 import useProduct from "./hooks/useProduct";
 import Navbar from "./components/Navbar";
 import AddProductForm from "./pages/AddProductForm";
+import ProductDetails from "./pages/ProductDetails";
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
 
   return (
       <div>
-      <Navbar />
+      <Navbar products={products}/>
 
     <Router>
       <Routes>
@@ -30,7 +31,10 @@ function App() {
         />}/>
           <Route path="/wardrobe/add" element={<AddProductForm
               product={product}
-              addProduct={addNewProduct} />}/>
+              addProduct={addNewProduct}
+          />}/>
+          <Route path="/wardrobe/:id" element={<ProductDetails products={products}
+          />}/>
       </Routes>
     </Router>
       </div>
