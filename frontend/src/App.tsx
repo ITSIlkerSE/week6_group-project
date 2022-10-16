@@ -7,6 +7,8 @@ import useProduct from "./hooks/useProduct";
 import Navbar from "./components/Navbar";
 import AddProductForm from "./pages/AddProductForm";
 import ProductDetails from "./pages/ProductDetails";
+import AboutUs from "./pages/AboutUs";
+import Footer from "./components/Footer";
 
 function App() {
 
@@ -33,10 +35,13 @@ function App() {
               product={product}
               addProduct={addNewProduct}
           />}/>
-          <Route path="/wardrobe/:id" element={<ProductDetails products={products}
+          <Route path="/wardrobe/:id" element={<ProductDetails
+              products={products}
           />}/>
+          <Route path="wardrobe/about-us" element={<AboutUs />}/>
       </Routes>
     </Router>
+          <Footer />
       </div>
   );
 }
