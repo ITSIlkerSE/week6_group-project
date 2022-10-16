@@ -6,6 +6,9 @@
     border-radius: 5px;
     margin: 1rem 1rem;
     box-shadow: 5px 5px 5px #00000052;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .card-body {
