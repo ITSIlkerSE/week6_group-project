@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import "./ProductCard.css";
 import {Product} from "../model/Product";
+import {Link, useNavigate} from "react-router-dom";
 
 type ProductCardProps = {
     product: Product;
@@ -13,6 +14,11 @@ function ProductCard(props: ProductCardProps) {
         golden.push(<i className="fa-solid fa-star" key={i}></i>)
     }
 
+    const navigate = useNavigate();
+    const navigateToDetails = () => {
+        navigate(`/wardrobe/:id`)
+    }
+
     return (
         <div className="card">
             <img src={props.product.image} className="card-img-top" style={{height: "190px"}}/>
@@ -23,7 +29,9 @@ function ProductCard(props: ProductCardProps) {
                 </div>
 
             <div className="gap-2 d-md-flex justify-content-md-center buttons">
-                <button className="btn me-md-2 button1" type="button">SEE DETAILS</button>
+                <Link to={"/wardrobe/" + props.product.id}>
+                    <button className="btn me-md-2 button1" type="button" onClick={navigateToDetails}>SEE DETAILS</button>
+                </Link>
                 <button className="btn me-md-2 button2" type="button">ADD TO CART</button>
             </div>
         </div>

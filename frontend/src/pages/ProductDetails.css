@@ -1,0 +1,77 @@
+.button-add {
+    background-color: darkslateblue;
+    color: #ffffff;
+
+}
+
+:hover.button-add {
+    border-color: darkslateblue;
+    background-color: #ffffff;
+    color: darkslateblue;
+}
+
+.details-container {
+    display: flex
+}
+
+.left-side {
+    display: flex;
+    width: 50%;
+}
+
+.details-image {
+    width: 90%;
+    margin-top: 90px
+}
+
+.right-side {
+    width: 50%;
+}
+
+.info-group {
+    margin-top: 88px;
+    margin-right: 80px;
+}
+
+.button1 {
+    background-color: darkslateblue;
+    border-color: darkslateblue;
+    color: #ffffff;
+    margin-bottom: 5px;
+    height: 35px;
+}
+
+:hover.button1 {
+    background-color: #ffffff;
+    border-color: darkslateblue;
+    color: darkslateblue;
+    height: 35px;
+}
+
+@media screen and (max-width: 860px) {
+
+    .details-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left-side {
+        display: flex;
+        width: 100%;
+        margin-left: 60px;
+    }
+
+    .right-side {
+        width: 100%;
+        margin-left: 60px;
+    }
+
+    .info-group {
+        margin-top: 25px;
+        margin-right: 80px;
+    }
+
+    .details-image {
+        margin-top: 25px;
+    }
+}
