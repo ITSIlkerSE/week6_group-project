@@ -47,7 +47,7 @@ jobs:
     needs: build-backend
     environment:
       name: Insane wardrobeDB Deployed
-      url: https://igr-wardrobe-db.herokuapp.com//
+      url: https://igr-wardrobe-db.herokuapp.com/
     env:
       HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
     steps:
