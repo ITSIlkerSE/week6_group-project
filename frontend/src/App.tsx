@@ -28,17 +28,19 @@ function App() {
 
     <Router>
       <Routes>
-        <Route path="/" element={<Homepage
+          <Route path="/" element={<Homepage
             products={products}
-        />}/>
+          />}/>
           <Route path="/wardrobe/add" element={<AddProductForm
               product={product}
               addProduct={addNewProduct}
           />}/>
           <Route path="/wardrobe/:id" element={<ProductDetails
               products={products}
+              editProduct={editProduct}
+              deleteProduct={deleteProduct}
           />}/>
-          <Route path="wardrobe/about-us" element={<AboutUs />}/>
+          <Route path="/wardrobe/about-us" element={<AboutUs />}/>
       </Routes>
     </Router>
           <Footer />

@@ -32,9 +32,10 @@ function UseProduct() {
             .then(() => getAllProducts())
     }
 
-    const editProduct = (id: string) => {
+    const editProduct = (id: string, product: Product) => {
         axios.put(`/api/wardrobe/${id}`, product)
             .then(getAllProducts)
+            .catch(error => error)
     }
 
     return {

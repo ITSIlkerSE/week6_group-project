@@ -26,6 +26,6 @@ public class MyWardrobeModel {
     private String price;
     private String category;
     private String brand;
-    private float rating;
+    private int rating;
     private boolean inStock;
 }
