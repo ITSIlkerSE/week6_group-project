@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="wardrobeDB1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/backend/target/wardrobeDB.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

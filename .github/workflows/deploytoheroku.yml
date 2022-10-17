@@ -10,8 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
+      - runs:
+          using: 'node16'
+          main: 'main.js'
       - name: Build Frontend
         run: |
           cd frontend
@@ -47,7 +48,7 @@ jobs:
     needs: build-backend
     environment:
       name: Insane wardrobeDB Deployed
-      url: https:///igr-wardrobe-db.herokuapp.com//
+      url: https://igr-wardrobe-db.herokuapp.com/
     env:
       HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
     steps:
