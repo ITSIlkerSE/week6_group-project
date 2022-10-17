@@ -54,7 +54,7 @@ function AddProductForm(props: AddProductFormProps) {
         }
         setTimeout(() => {
             routeChange()
-        }, 3000);
+        }, 1000);
 
     }
 

@@ -26,7 +26,7 @@ public class MyWardrobeController {
         return service.getAllProducts();
     }
 
-    @GetMapping("{id}")
+    @GetMapping("/{id}")
     public Optional<MyWardrobeModel> getProductById(@PathVariable String id) {
         return service.getProductById(id);
     }
@@ -36,14 +36,14 @@ public class MyWardrobeController {
         return service.addProduct(product);
     }
 
-    @DeleteMapping("{id}")
+    @DeleteMapping("/{id}")
     public void deleteProduct(@PathVariable String id) {
         service.deleteProduct(id);
     }
 
-    @PutMapping(path = "{id}")
-    public MyWardrobeModel updateProduct(@PathVariable String id, @RequestBody MyWardrobeModel product){
-        return service.updateProduct(product);
+    @PutMapping("/{id}")
+    public MyWardrobeModel editProduct(@PathVariable String id, @RequestBody MyWardrobeModel product) {
+        return service.updateProduct(id, product);
     }
 
 }
