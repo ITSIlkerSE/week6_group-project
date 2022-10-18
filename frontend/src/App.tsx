@@ -9,6 +9,7 @@ import AddProductForm from "./pages/AddProductForm";
 import ProductDetails from "./pages/ProductDetails";
 import AboutUs from "./pages/AboutUs";
 import Footer from "./components/Footer";
+import LazyDeveloper from "./pages/LazyDeveloper";
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
               deleteProduct={deleteProduct}
           />}/>
           <Route path={"/wardrobe/about-us"} element={<AboutUs />}/>
+          <Route path={"/wardrobe/add-to-cart"} element={<LazyDeveloper />}/>
       </Routes>
     </HashRouter>
           <Footer />

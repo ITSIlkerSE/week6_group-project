@@ -44,10 +44,10 @@ function Navbar(props: NavbarProps) {
                     </form>
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="#">register</a>
+                            <a className="nav-link active" aria-current="page" href="#/wardrobe/add-to-cart">register</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="#">cart</a>
+                            <a className="nav-link active" aria-current="page" href="#/wardrobe/add-to-cart">cart</a>
                         </li>
                     </ul>
 
