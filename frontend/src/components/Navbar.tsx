@@ -23,7 +23,7 @@ function Navbar(props: NavbarProps) {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0" style={{width: "31%"}}>
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="/wardrobe/add">Add Product</a>
+                            <a className="nav-link active" aria-current="page" href="#/wardrobe/add">Add Product</a>
                         </li>
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -31,8 +31,8 @@ function Navbar(props: NavbarProps) {
                                 About Us
                             </a>
                             <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href="/wardrobe/about-us">Company</a></li>
-                                <li><a className="dropdown-item" href="/wardrobe/about-us">About Us</a></li>
+                                <li><a className="dropdown-item" href="#/wardrobe/about-us">Company</a></li>
+                                <li><a className="dropdown-item" href="#/wardrobe/about-us">About Us</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -44,10 +44,10 @@ function Navbar(props: NavbarProps) {
                     </form>
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="#">register</a>
+                            <a className="nav-link active" aria-current="page" href="#/wardrobe/add-to-cart">register</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="#">cart</a>
+                            <a className="nav-link active" aria-current="page" href="#/wardrobe/add-to-cart">cart</a>
                         </li>
                     </ul>
 

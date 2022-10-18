@@ -19,6 +19,10 @@ function ProductCard(props: ProductCardProps) {
         navigate(`/wardrobe/:id`)
     }
 
+    const navigateToLazyDeveloper = () => {
+        navigate("/wardrobe/add-to-cart")
+    }
+
     return (
         <div className="card">
             <img src={props.product.image} className="card-img-top" style={{height: "190px"}}/>
@@ -32,7 +36,7 @@ function ProductCard(props: ProductCardProps) {
                 <Link to={"/wardrobe/" + props.product.id}>
                     <button className="btn me-md-2 button1" type="button" onClick={navigateToDetails}>SEE DETAILS</button>
                 </Link>
-                <button className="btn me-md-2 button2" type="button">ADD TO CART</button>
+                <button className="btn me-md-2 button2" type="button" onClick={navigateToLazyDeveloper}>ADD TO CART</button>
             </div>
         </div>
     );

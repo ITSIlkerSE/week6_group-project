@@ -9,7 +9,6 @@ type ProductGalleryProps = {
 }
 
 function ProductGallery(props: ProductGalleryProps) {
-
     const sorting = [...props.products].sort((a, b) => a.name > b.name ? 1 : -1)
     return (
         <div style={{display: "flex", flexWrap: "wrap",margin: "auto"}}>
