@@ -1,9 +1,14 @@
 import React from 'react';
 import "./AboutUs.css";
+import {Link} from "react-router-dom";
 
 function AboutUs() {
     return (
         <div>
+            <Link to={"/"}>
+                <button className="btn button-add" style={{marginLeft: "20px", marginTop: "20px"}}>BACK
+                </button>
+            </Link>
         <div className="about-container">
             <h1 className="title">MyWardrobe Leadership</h1>
             <hr />
