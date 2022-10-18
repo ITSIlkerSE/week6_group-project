@@ -1,0 +1,13 @@
+.edit-modal-button {
+    width: 200px;
+    background: #ffffff;
+    color: gray;
+    borderColor: solid 1px gray;
+}
+
+:hover.edit-modal-button {
+    width: 200px;
+    background: darkslateblue;
+    color: #ffffff;
+    borderColor: darkslateblue;
+}

@@ -1,4 +1,5 @@
 import React, {FormEvent, useState} from 'react';
+import "./EditModal.css";
 import {Product} from "../model/Product";
 import {useParams} from "react-router-dom";
 
@@ -170,8 +171,8 @@ function EditModal(props: EditModalProps) {
                                 <p style={{fontSize: "large"}}> Product available? Click here if it is in Stock</p>
                             </div>
                             <div className="button-group">
-                                <button type="submit" className="btn btn-info" data-bs-dismiss="modal"
-                                        style={{width: "200px"}}>Edit <i className="fa-solid fa-pen-to-square"></i>
+                                <button type="submit" className="btn edit-modal-button" data-bs-dismiss="modal"
+                                >Edit
                                 </button>
                                 <button type="button" className="btn btn-secondary" style={{width: "200px"}}
                                         data-bs-dismiss="modal">Close
