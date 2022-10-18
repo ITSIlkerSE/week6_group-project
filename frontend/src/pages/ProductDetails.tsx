@@ -1,7 +1,7 @@
 import React from 'react';
 import "./ProductDetails.css";
 import {Product} from "../model/Product";
-import {Link, useParams} from "react-router-dom";
+import {Link, useNavigate, useParams} from "react-router-dom";
 import EditModal from "../components/EditModal";
 import DeleteModal from "../components/DeleteModal";
 
@@ -25,6 +25,16 @@ function ProductDetails(props: ProductDetailsProps) {
 
     if (product === undefined) {
         return (<>Sorry no product found!</>)
+    }
+
+    const handleClick = () => {
+        routeChange();
+    }
+
+    let navigate = useNavigate();
+    const routeChange = () =>{
+        let path = "/wardrobe/add-to-cart";
+        navigate(path);
     }
 
     return (
@@ -51,7 +61,7 @@ function ProductDetails(props: ProductDetailsProps) {
                             <p style={{color: "red"}}>Out of Stock</p>
                         }
 
-                        <button className="btn me-md-2 button1" type="button">ADD TO CART</button>
+                        <button className="btn me-md-2 button1" type="button" onClick={handleClick}>ADD TO CART</button>
                     </div>
                 </div>
             </div>
