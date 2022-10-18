@@ -2,6 +2,8 @@ package com.example.backend.service;
 
 import com.example.backend.model.MyWardrobeModel;
 import com.example.backend.repo.MyWardrobeRepo;
+import io.netty.util.internal.ObjectPool;
+import net.bytebuddy.dynamic.DynamicType;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -90,9 +92,32 @@ class MyWardrobeServiceTest {
 
     @Test
     void deleteProduct() {
+
+        MyWardrobeModel model1 = new MyWardrobeModel("1", "jacke", "bild", "xl", "schön", "25", "top", "nike", 5, true);
+        MyWardrobeModel model2 = new MyWardrobeModel("2", "Hose", "bild", "xl", "schön", "25", "top", "nike", 5, true);
+        MyWardrobeModel model3 = new MyWardrobeModel("3", "Shirt", "bild", "xl", "schön", "25", "top", "nike", 5, true);
+
+        //Given
+        when(repo.findById("1")).thenReturn(Optional.ofNullable(model1));
+
+        //When
+        service.deleteProduct("1");
+
+        //Then
+        verify(repo).deleteById("1");
+
     }
 
     @Test
     void updateProduct() {
+
+        MyWardrobeModel model1 = new MyWardrobeModel("1", "jacke", "bild", "xl", "schön", "25", "top", "nike", 5, true);
+
+        when(service.updateProduct("1", model1)).thenReturn(model1);
+        when(repo.existsById("1")).thenReturn(true);
+
+        MyWardrobeModel actual = service.updateProduct("1", model1);
+
+        assertEquals(model1, actual);
     }
 }
