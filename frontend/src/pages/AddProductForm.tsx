@@ -2,12 +2,11 @@ import React, {FormEvent, useState} from 'react';
 import "./AddProductForm.css";
 import {Product} from "../model/Product";
 import {Link, useNavigate} from "react-router-dom";
+import toast, { Toaster } from 'react-hot-toast';
 
 type AddProductFormProps = {
-
     product: Product;
     addProduct: (product: Product) => void;
-
 }
 
 function AddProductForm(props: AddProductFormProps) {
@@ -52,11 +51,17 @@ function AddProductForm(props: AddProductFormProps) {
             setRating(0)
             setInStock(false)
         }
+
+        successProduct()
+
         setTimeout(() => {
             routeChange()
         }, 1000);
 
     }
+
+    const successProduct = () => toast.success("Product successfully added!");
+    const error = () => toast.error("Oops! An error occurred.");
 
     let navigate = useNavigate();
     const routeChange = () =>{
@@ -65,6 +70,7 @@ function AddProductForm(props: AddProductFormProps) {
     }
 
     return (
+        <>
         <div>
             <Link to={"/"}>
                 <button className="btn button-add" style={{marginLeft: "20px", marginTop: "20px"}}>BACK
@@ -196,6 +202,9 @@ function AddProductForm(props: AddProductFormProps) {
                 </div>
             </form>
         </div>
+    <Toaster position="top-center"
+             reverseOrder={true} />
+        </>
     );
 }
 
