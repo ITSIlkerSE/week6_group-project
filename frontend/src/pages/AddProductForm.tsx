@@ -1,6 +1,5 @@
 import React, {FormEvent, useState} from 'react';
 import "./AddProductForm.css";
-import 'react-toastify/dist/ReactToastify.css';
 import {Product} from "../model/Product";
 import {Link, useNavigate} from "react-router-dom";
 import toast, { Toaster } from 'react-hot-toast';
