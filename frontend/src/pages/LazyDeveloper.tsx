@@ -14,7 +14,7 @@ function LazyDeveloper() {
                 <h2>Come back tomorrow and maybe it works!</h2>
             </div>
             <div className="lazy-image">
-                <img src={"http://www.quickmeme.com/img/ff/ffbc493f104f71cf71eaae27d3fc77c0ccbb1215d78eb0024e3e4eb1c6c79524.jpg"}/>
+                <img src={"https://media.tenor.com/njhl2B0E5q8AAAAM/spongebob-procrastination.gif"} alt={""} style={{height: "300px", width: "400px"}}/>
             </div>
         </div>
     );
