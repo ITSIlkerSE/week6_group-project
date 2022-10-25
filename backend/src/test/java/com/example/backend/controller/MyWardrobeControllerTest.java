@@ -18,10 +18,10 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
 @SpringBootTest
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
 @AutoConfigureMockMvc
-
 class MyWardrobeControllerTest {
 
     @Autowired
@@ -101,7 +101,7 @@ class MyWardrobeControllerTest {
                         "brand": "nike",
                         "rating": 5,
                         "inStock": true
-        
+                        
                     },
                     {
                         "id":"2",

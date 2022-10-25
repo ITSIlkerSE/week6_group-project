@@ -19,26 +19,24 @@ class MyWardrobeServiceTest {
     private final MyWardrobeService service = new MyWardrobeService(repo, idService);
 
 
+    @Test
+    void getAllProducts() {
 
-        @Test
-        void getAllProducts() {
+        //GIVEN
+        MyWardrobeModel model1 = new MyWardrobeModel("1", "jacke", "bild", "xl", "schön", "25", "top", "nike", 5, true);
+        MyWardrobeModel model2 = new MyWardrobeModel("2", "Hose", "bild", "xl", "schön", "25", "top", "nike", 5, true);
+        MyWardrobeModel model3 = new MyWardrobeModel("3", "Shirt", "bild", "xl", "schön", "25", "top", "nike", 5, true);
 
-            //GIVEN
-            MyWardrobeModel model1 = new MyWardrobeModel("1", "jacke", "bild", "xl", "schön", "25", "top", "nike", 5, true);
-            MyWardrobeModel model2 = new MyWardrobeModel("2", "Hose", "bild", "xl", "schön", "25", "top", "nike", 5, true);
-            MyWardrobeModel model3 = new MyWardrobeModel("3", "Shirt", "bild", "xl", "schön", "25", "top", "nike", 5, true);
+        when(repo.findAll())
+                .thenReturn(List.of(model1, model2, model3));
 
-            when(repo.findAll())
-                    .thenReturn(List.of(model1, model2, model3));
-
-                            //WHEN
-            List<MyWardrobeModel> actual = service.getAllProducts();
-                            //THEN
-            List<MyWardrobeModel> expected = List.of(model1, model2, model3);
-            verify(repo).findAll();
-            assertEquals(expected, actual);
-        }
-
+        //WHEN
+        List<MyWardrobeModel> actual = service.getAllProducts();
+        //THEN
+        List<MyWardrobeModel> expected = List.of(model1, model2, model3);
+        verify(repo).findAll();
+        assertEquals(expected, actual);
+    }
 
 
     @Test
